@@ -24,24 +24,7 @@
     <div class="contenedor-principal">
 
         <!-- Card que contiene el formulario dentro de un diseño limpio y centrado -->
-        <div class="cont-card">
-            <div class="card text-center">
-
-                <!-- Imagen decorativa en la parte superior del card -->
-                <div class="card-img">
-                    <img src="./IMG/logo-restaurante.png" width="100" height="100" alt="Logo del Restaurante">
-                </div>
-
-                <!-- Cuerpo del card con título y formulario -->
-                <div class="card-body">
-                    <h4>Menú Disponible</h4><br>
-
-                    <!-- Inclusión del formulario PHP para la venta de comida -->
-                    <?php include ("BASE/PHP/P3/P3_FORMULARIO.php"); ?>
-
-                </div> <!-- Fin del cuerpo del card -->
-            </div>
-        </div> <!-- Fin del contenedor del card -->
+        <?php include("BASE/HTML/P3/Card.html"); ?>
 
     </div> <!-- Fin del contenedor principal -->
 

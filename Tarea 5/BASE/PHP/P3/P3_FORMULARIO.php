@@ -51,12 +51,6 @@ $opciones = [
 <!-- Modal donde se mostrarán los resultados -->
 <?php include("BASE/PHP/P3/P3_RESULTADOMODAL.php"); ?>
 
-<!-- Botón para abrir manualmente el modal -->
-<br>
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-    Mostrar Factura
-</button>
-
 <!-- ========== JAVASCRIPT ========== -->
 
 <!-- jQuery para facilitar la manipulación del DOM y AJAX -->
