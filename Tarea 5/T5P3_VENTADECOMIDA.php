@@ -12,7 +12,7 @@
 </head>
 
 <body>
-  <?php incLude("BASE/HTML/comunes/header.html"); ?>
+  <?php include("BASE/HTML/comunes/header.html"); ?>
   <div class="contenedor-principal"><!--INICIA EL CONTENEDOR PRINCIPAL DE LA PAGINA-->
   	
 
@@ -31,7 +31,9 @@
    </div><!--FINALIZA EL CARD-->
 
   </div><!--TERMINA CONTENEDOR PRINCIPAL DE LA PÁGINA-->
+
 	<?php include ("BASE/HTML/comunes/footer.html"); ?><!--SE INCLUYE EL PIE DE PAGINA-->
+
 </body>
 </html>
 
