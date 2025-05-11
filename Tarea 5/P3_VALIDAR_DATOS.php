@@ -11,7 +11,7 @@
     ];
 
     // Verificamos si los datos han sido enviados por POST
-    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Guardar los índices o keys seleccionados
         $key1 = isset($_POST['radio1']) ? array_search(floatval($_POST['radio1']), $opciones['radio1']) : '';
