@@ -8,7 +8,10 @@
     <!-- Enlace a Bootstrap CSS desde CDN para estilos y componentes responsivos -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Estilos personalizados (barra de navegación y pie de página) -->
+    <!-- Estilos personalizados para el pie de página -->
+    <link rel="stylesheet" type="text/css" href="./ESTILOS/HEADER.css">
+
+    <!-- Estilos personalizados para el pie de página -->
     <link rel="stylesheet" type="text/css" href="./ESTILOS/BARRA_FOOTER.css">
 
     <!-- Estilos personalizados específicos del formulario del punto 3 -->
