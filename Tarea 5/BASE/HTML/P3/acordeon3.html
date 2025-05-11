@@ -5,16 +5,16 @@
                     Menestras
                 </button>
             </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" >
                 <div class="accordion-body">
                     <?php foreach ($opciones['radio3'] as $key => $value): ?>
                         <label>
-                            <input type="radio" name="radio3" value="<?= $value ?>" > <?= $key ?> (<?= $value ?>)
+                            <input type="radio" name="radio3" value="<?= $value ?>" required <?= isset($_GET['radio3']) && $_GET['radio3'] === $key ? 'checked' : '' ?>> <?= $key ?> (<?= $value ?>)
                         </label><br>
                     <?php endforeach; ?>
 
                     <!-- Entradas de número -->
-                    <label>Cantidad: <input type="number" name="numero3" min="0"></label><br>
+                    <label>Cantidad: <input type="number" name="numero3" min="0" max="10" required value="<?= isset($_GET['numero3']) ? htmlspecialchars($_GET['numero3']) : '' ?>"></label><br>
                 </div>
             </div>
         </div>

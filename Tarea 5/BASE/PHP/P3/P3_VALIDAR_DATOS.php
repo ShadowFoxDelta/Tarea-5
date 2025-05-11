@@ -1,6 +1,6 @@
 <?php
     //Include de la clase que procesa los datos
-    include ("P3_CLASE_PROCESARDATOS.php");
+    include (__DIR__ . "/../../Clases/P3/P3_CLASE_PROCESARDATOS.php");
 
     //Array asociativo que contiene los datos de las comidas
     $opciones = [
@@ -33,6 +33,31 @@
         // Instanciamos el objeto ProcesarDatos
         $procesar = new ProcesarDatos($radio1, $radio2, $radio3, $radio4, $cantidad1, $cantidad2, $cantidad3, $cantidad4, $edad);
 
+        //Verificar si se encontro algun error
+        if ($procesar->HayError()) {
+            $errorMsg = urlencode($procesar->GetError());
+    
+            $queryString = http_build_query([
+            'error' => $errorMsg,
+            'radio1' => $key1,
+            'radio2' => $key2,
+            'radio3' => $key3,
+            'radio4' => $key4,
+            'precio1' => $radio1,
+            'precio2' => $radio2,
+            'precio3' => $radio3,
+            'precio4' => $radio4,
+            'numero1' => $cantidad1,
+            'numero2' => $cantidad2,
+            'numero3' => $cantidad3,
+            'numero4' => $cantidad4,
+            'edadcliente' => $edad
+
+            ]); 
+            header("Location: ../../../T5P3_VENTADECOMIDA.php?$queryString");
+            exit;
+        }
+
         // Realizamos la suma de los valores atraves de una funcion
         $resultado = $procesar->calcularValores();
 
@@ -58,7 +83,7 @@
             'edadcliente' => $edad
         ]);
 
-        header("Location: T5P3_VENTADECOMIDA.php?$queryString");
+       header("Location: ../../../T5P3_VENTADECOMIDA.php?$queryString");
         exit;
     }
 ?>

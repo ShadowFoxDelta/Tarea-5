@@ -1,15 +1,10 @@
 <?php
 class ProcesarDatos {
     //Declaramos las Variables 
-    public $radio1;
-    public $radio2;
-    public $radio3;
-    public $radio4;
-    public $cantidad1;
-    public $cantidad2;
-    public $cantidad3;
-    public $cantidad4;
+    public $radio1, $radio2, $radio3, $radio4;
+    public $cantidad1, $cantidad2, $cantidad3, $cantidad4;
     public $edad;
+    public $error;
 
     // Constructor para inicializar las variables
     public function __construct($radio1, $radio2, $radio3, $radio4, $cantidad1, $cantidad2, $cantidad3, $cantidad4, $edad) {
@@ -23,10 +18,55 @@ class ProcesarDatos {
         $this->cantidad3 = $cantidad3;
         $this->cantidad4 = $cantidad4;
         $this->edad = $edad;
+
+        $this->validarDatos();
+
+
+    }
+
+    //Función verificar entradas
+    private function validarDatos() {
+        // Verificar radios vacíos o nulos
+        if ($this->radio1 === null || $this->radio1 === '' ||
+            $this->radio2 === null || $this->radio2 === '' ||
+            $this->radio3 === null || $this->radio3 === '' ||
+            $this->radio4 === null || $this->radio4 === '') {
+            $this->error = "Debe seleccionar todas las opciones de comida.";
+            echo $this->radio3;
+            return;
+        }
+
+        // Verificar si alguna cantidad es 0
+        if ($this->cantidad1 == 0 || $this->cantidad2 == 0 || $this->cantidad4 == 0) {
+            $this->error = "Debe ingresar cantidades mayores que 0 para todos los productos.";
+            return;
+        }
+
+
+        // Menestra: solo se acepta 0 si es "Ninguno"
+
+        if ($this->radio3 !== 0.00 && $this->cantidad3 <= 0) {
+            $this->cantidad3 = 0;
+            $this->error = "Debe ingresar una cantidad mayor a 0 para la menestra seleccionada.";
+        return;
+        }
+    }
+
+
+    //Función verificar si hay error
+    public function HayError(){
+        return isset($this->error);
+    }
+
+    //Función recuperar error
+    public function GetError(){
+        return $this->error ?? null;
     }
 
     // Función que suma los valores
     public function calcularValores() {
+        if ($this->HayError()) return null;
+
         $ed = $this->edad;
 
         //Verificamos si aplica descuento
@@ -50,6 +90,8 @@ class ProcesarDatos {
 
 
     public function calcularDescuento() {
+        if ($this->HayError()) return null;
+
         $ed = $this->edad;
 
         if($ed >= 57){

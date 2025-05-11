@@ -11,7 +11,7 @@
     <!-- 🧁 Fin encabezado -->
 
     <!-- 🔽 Contenido colapsable -->
-    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
 
         <!-- 📦 Cuerpo del acordeón -->
         <div class="accordion-body">
@@ -19,13 +19,13 @@
             <!-- 🍨 Opciones de radio (postres) -->
             <?php foreach ($opciones['radio4'] as $key => $value): ?>
                 <label>
-                    <input type="radio" name="radio4" value="<?= $value ?>" > <?= $key ?> (<?= $value ?>)
+                    <input type="radio" name="radio4" value="<?= $value ?>" required <?= isset($_GET['radio4']) && $_GET['radio4'] === $key ? 'checked' : '' ?>> <?= $key ?> (<?= $value ?>)
                 </label><br>
             <?php endforeach; ?>
             <!-- 🍨 Fin opciones de radio -->
 
             <!-- 🔢 Input numérico para cantidad -->
-            <label>Cantidad: <input type="number" name="numero4" min="0"></label><br>
+            <label>Cantidad: <input type="number" name="numero4" min="0" max="10" required value="<?= isset($_GET['numero4']) ? htmlspecialchars($_GET['numero4']) : '' ?>"></label><br>
             <!-- 🔢 Fin input cantidad -->
 
         </div>

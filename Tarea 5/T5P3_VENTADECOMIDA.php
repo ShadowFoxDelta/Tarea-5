@@ -31,8 +31,7 @@
    </div><!--FINALIZA EL CARD-->
 
   </div><!--TERMINA CONTENEDOR PRINCIPAL DE LA PÁGINA-->
-	
+	<?php include ("BASE/HTML/comunes/footer.html"); ?><!--SE INCLUYE EL PIE DE PAGINA-->
 </body>
 </html>
 
-<?php include ("BASE/HTML/comunes/footer.html"); ?><!--SE INCLUYE EL PIE DE PAGINA-->

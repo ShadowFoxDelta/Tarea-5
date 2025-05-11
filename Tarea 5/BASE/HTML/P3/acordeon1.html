@@ -5,16 +5,16 @@
                     Carnes
                 </button>
             </h2>
-            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne">
                 <div class="accordion-body">
                     <?php foreach ($opciones['radio1'] as $key => $value): ?>
                         <label>
-                            <input type="radio" name="radio1" value="<?= $value ?>" > <?= $key ?> (<?= $value ?>)
+                            <input type="radio" name="radio1" value="<?= $value ?>" required <?= isset($_GET['radio1']) && $_GET['radio1'] === $key ? 'checked' : '' ?>> <?= $key ?> (<?= $value ?>)
                         </label><br>
                     <?php endforeach; ?>
 
                      <!-- Entradas de número -->
-                    <label>Catidad: <input type="number" name="numero1" min="0"></label><br>
+                    <label>Catidad: <input type="number" name="numero1" min="0" max="10" required value="<?= isset($_GET['numero1']) ? htmlspecialchars($_GET['numero1']) : '' ?>"></label><br>
                 </div>
             </div>
         </div>

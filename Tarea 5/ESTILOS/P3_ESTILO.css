@@ -9,8 +9,11 @@ body {
 
 /*DAMOS MARGEN SUPERIOR Y COLOCAMOS UNA IMAGEN DE FONDO AL CARD PRINCIPAL P3*/
 .contenedor-principal{
+  height: 1500px !important;
+  align-content: flex-start;
   margin-top: 2vw;
   background-image: url('../IMG/cine.jpg');
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

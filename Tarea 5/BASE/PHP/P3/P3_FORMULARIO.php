@@ -25,6 +25,15 @@ $opciones = [
 ];
 ?>
 
+
+<?php
+//Mensaje de error
+ if (isset($_GET['error'])): ?>
+    <div class="alert alert-danger" role="alert">
+        <?= htmlspecialchars(urldecode($_GET['error'])) ?>
+    </div>
+<?php endif; ?>
+
 <form  action="BASE/PHP/P3/P3_VALIDAR_DATOS.php" method="POST">
     <div class="accordion" id="accordionExample">
         
@@ -46,13 +55,13 @@ $opciones = [
 
     <!-- Entrada de edad -->
     <label for="edadcliente"> <h3>Ingresar Edad: </h3> </label><br>
-    <input type="number" id="edadcliente" name="edadcliente" min="0"  required><br><br>
+    <input type="number" id="edadcliente" name="edadcliente" min="0"  required value="<?= isset($_GET['edadcliente']) ? htmlspecialchars($_GET['edadcliente']) : '' ?>"><br><br>
 
-    <br>
+    <br> 
 
     <!-- Botones necesarios -->
     <button type="submit" id="enviar">Enviar</button>
-    <button type="reset" id="limpiar">Limpiar</button>
+    <button type="reset" id="limpiar" onclick="window.location.href='T5P3_VENTADECOMIDA.php';">Limpiar</button>
 
 </form>
 
