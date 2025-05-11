@@ -35,7 +35,7 @@
             $('#exampleModal').modal('show');
           }
         },
-        error: function(){
+        error: function(){// Mensaje de error
           alert('Hubo un error al procesar los datos.');
         }
       });

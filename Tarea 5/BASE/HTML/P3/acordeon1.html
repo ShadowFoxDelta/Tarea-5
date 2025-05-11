@@ -1,20 +1,26 @@
 <!-- Acordeón 1 -->
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="headingOne">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    Carnes
-                </button>
-            </h2>
-            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne">
-                <div class="accordion-body">
-                    <?php foreach ($opciones['radio1'] as $key => $value): ?>
-                        <label>
-                            <input type="radio" name="radio1" value="<?= $value ?>" required <?= isset($_GET['radio1']) && $_GET['radio1'] === $key ? 'checked' : '' ?>> <?= $key ?> (<?= $value ?>)
-                        </label><br>
-                    <?php endforeach; ?>
+<div class="accordion-item"> <!-- INICIO del div del acordeón 1 -->
+    <!-- Cabecera del acordeón -->
+    <h2 class="accordion-header" id="headingOne">
+        <!-- Botón que permite expandir o colapsar el contenido del acordeón -->
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Carnes
+        </button>
+    </h2>
 
-                     <!-- Entradas de número -->
-                    <label>Catidad: <input type="number" name="numero1" min="0" max="10" required value="<?= isset($_GET['numero1']) ? htmlspecialchars($_GET['numero1']) : '' ?>"></label><br>
-                </div>
-            </div>
-        </div>
+    <!-- Contenido que se colapsa/expande con el acordeón -->
+    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"> <!-- INICIO del div que contiene el cuerpo del acordeón -->
+        <div class="accordion-body"> <!-- INICIO del div del cuerpo del acordeón -->
+            <!-- Iteramos sobre las opciones de "radio1" (Carnes) -->
+            <?php foreach ($opciones['radio1'] as $key => $value): ?>
+                <!-- Entrada de tipo radio para elegir la carne -->
+                <label>
+                    <input type="radio" name="radio1" value="<?= $value ?>" required <?= isset($_GET['radio1']) && $_GET['radio1'] === $key ? 'checked' : '' ?>> <?= $key ?> (<?= $value ?>)
+                </label><br>
+            <?php endforeach; ?>
+
+            <!-- Entrada de número para seleccionar la cantidad -->
+            <label>Cantidad: <input type="number" name="numero1" min="0" max="10" required value="<?= isset($_GET['numero1']) ? htmlspecialchars($_GET['numero1']) : '' ?>"></label><br>
+        </div> <!-- FIN del div del cuerpo del acordeón -->
+    </div> <!-- FIN del div que contiene el cuerpo del acordeón -->
+</div> <!-- FIN del div del acordeón 1 -->

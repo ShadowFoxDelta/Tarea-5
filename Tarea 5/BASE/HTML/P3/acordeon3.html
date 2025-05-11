@@ -1,20 +1,23 @@
 <!-- Acordeón 3 -->
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="headingThree">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    Menestras
-                </button>
-            </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" >
-                <div class="accordion-body">
-                    <?php foreach ($opciones['radio3'] as $key => $value): ?>
-                        <label>
-                            <input type="radio" name="radio3" value="<?= $value ?>" required <?= isset($_GET['radio3']) && $_GET['radio3'] === $key ? 'checked' : '' ?>> <?= $key ?> (<?= $value ?>)
-                        </label><br>
-                    <?php endforeach; ?>
+<div class="accordion-item"> <!-- INICIO del div del acordeón 3 -->
+    <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Menestras
+        </button>
+    </h2>
 
-                    <!-- Entradas de número -->
-                    <label>Cantidad: <input type="number" name="numero3" min="0" max="10" required value="<?= isset($_GET['numero3']) ? htmlspecialchars($_GET['numero3']) : '' ?>"></label><br>
-                </div>
-            </div>
-        </div>
+    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"> <!-- INICIO del div que contiene el cuerpo del acordeón -->
+        <div class="accordion-body"> <!-- INICIO del div del cuerpo del acordeón -->
+            <!-- Iteramos sobre las opciones de "radio3" (Menestras) -->
+            <?php foreach ($opciones['radio3'] as $key => $value): ?>
+                <!-- Entrada de tipo radio para elegir la menestra -->
+                <label>
+                    <input type="radio" name="radio3" value="<?= $value ?>" required <?= isset($_GET['radio3']) && $_GET['radio3'] === $key ? 'checked' : '' ?>> <?= $key ?> (<?= $value ?>)
+                </label><br>
+            <?php endforeach; ?>
+
+            <!-- Entrada de número para seleccionar la cantidad -->
+            <label>Cantidad: <input type="number" name="numero3" min="0" max="10" required value="<?= isset($_GET['numero3']) ? htmlspecialchars($_GET['numero3']) : '' ?>"></label><br>
+        </div> <!-- FIN del div del cuerpo del acordeón -->
+    </div> <!-- FIN del div que contiene el cuerpo del acordeón -->
+</div> <!-- FIN del div del acordeón 3 -->
