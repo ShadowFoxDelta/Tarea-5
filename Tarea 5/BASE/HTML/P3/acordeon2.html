@@ -1,0 +1,20 @@
+<!-- Acordeón 2 -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Arrroz
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <?php foreach ($opciones['radio2'] as $key => $value): ?>
+                        <label>
+                            <input type="radio" name="radio2" value="<?= $value ?>" > <?= $key ?> (<?= $value ?>)
+                        </label><br>
+                    <?php endforeach; ?>
+
+                    <!-- Entradas de número -->
+                    <label>Cantidad: <input type="number" name="numero2" min="0"></label><br>
+                </div>
+            </div>
+        </div>

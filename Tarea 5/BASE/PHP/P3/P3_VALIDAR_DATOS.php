@@ -1,6 +1,6 @@
 <?php
     //Include de la clase que procesa los datos
-    include ("P3_PROCESARDATOS.php");
+    include ("P3_CLASE_PROCESARDATOS.php");
 
     //Array asociativo que contiene los datos de las comidas
     $opciones = [
