@@ -126,7 +126,7 @@ $opciones = [
 
 </form>
 
-<?php include ("ESTILOS/P3_RESULTADOMODAL.php"); ?>
+<?php include ("BASE/PHP/P3/P3_RESULTADOMODAL.php"); ?>
 
 <br>
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">

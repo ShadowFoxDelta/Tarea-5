@@ -12,8 +12,9 @@
 </head>
 
 <body>
+  <?php incLude("BASE/HTML/comunes/header.html"); ?>
   <div class="contenedor-principal"><!--INICIA EL CONTENEDOR PRINCIPAL DE LA PAGINA-->
-  	<?php incLude("BASE/menu.html"); ?>
+  	
 
     <div class="cont-card"><!--INICIAMOS UN CARD-->
      <div class="card text-center">
@@ -23,7 +24,7 @@
   
      	<div class="card-body"><!--INICIA EL CUERPO DEL CARD-->
      		<h4>Menú Disponible</h4><br>
-     		<?php include ("ESTILOS/P3_FORMULARIO.php"); ?><!--INCLUIMOS EL FORMULARIO-->
+     		<?php include ("BASE/PHP/P3/P3_FORMULARIO.php"); ?><!--INCLUIMOS EL FORMULARIO-->
      		
      	</div><!--FINALIZA EL CUERPO DEL CARD-->
      </div>
@@ -34,4 +35,4 @@
 </body>
 </html>
 
-<?php include ("BASE/footer.html"); ?><!--SE INCLUYE EL PIE DE PAGINA-->
+<?php include ("BASE/HTML/comunes/footer.html"); ?><!--SE INCLUYE EL PIE DE PAGINA-->
