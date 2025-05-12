@@ -27,7 +27,7 @@ include "T5P2/P2_OPERACIONES2.php";
            <center>
            <?php
             include "T5P2/P2_FORM.php";
-            ?>
+            ?><!--INICIA Form2-->
             </center>
         </div><!--FINALIZA EL CUERPO DEL CARD-->
      </div>
