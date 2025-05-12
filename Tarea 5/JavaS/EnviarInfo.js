@@ -1,3 +1,7 @@
+/*
+Este script se encarga de rellenar el modal con la información recuperada de la clase validar datos.
+En caso de error manda un mensaje con "alert".
+*/
 $(document).ready(function() {
     // Captura el evento submit del formulario
     $("#P3Form").submit(function(event) {
