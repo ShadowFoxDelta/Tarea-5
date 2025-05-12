@@ -31,5 +31,6 @@
             $('#formularioP1').trigger("reset");
         }
     </script>
+    <?php include("../BASE/HTML/comunes/footer.html"); ?>
 </body>
 </html>
