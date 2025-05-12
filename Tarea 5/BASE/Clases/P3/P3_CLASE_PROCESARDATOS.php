@@ -1,4 +1,10 @@
+
 <?php
+/*
+Esta clase se encarga de procesar los datos una vez pasaron por P3_VALIDARDATOS.php, calcula el subtotal y total del pedido.
+En caso de que haya un error con los datos envia un mensaje de error de que faltan campos por rellenar.
+El constructor recupera con POST los datos almacenados en los acordeones, para generar la factura.
+*/
 class ProcesarDatos {
     //Declaramos las Variables 
     public $radio1, $radio2, $radio3, $radio4;

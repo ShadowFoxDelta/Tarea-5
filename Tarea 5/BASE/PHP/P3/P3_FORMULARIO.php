@@ -59,9 +59,6 @@ $opciones = [
 <!--incluye Popper y componentes dinámicos como el modal -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
-<!-- Script personalizado para prevenir recarga al volver atrás (si lo tienes implementado ahí) -->
-<script src="JavaS/JUnfresh.js"></script>
-
 <!-- Script AJAX que gestiona el envío del formulario y muestra el modal con los datos -->
 <script src="JavaS/EnviarInfo.js"></script>
 
