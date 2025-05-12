@@ -1,5 +1,5 @@
 
-<?php include ("./BASE/menu.html"); ?><!--SE INCLUYE EL MENÚ-->
+<?php include("BASE/HTML/comunes/header.html"); ?><!--SE INCLUYE EL MENÚ-->
 
 
 <!DOCTYPE html>
@@ -7,8 +7,13 @@
 <head>
 
 	<title>Programa 1</title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+	<meta charset="utf-8"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Estilos personalizados para el pie de página -->
+    <link rel="stylesheet" type="text/css" href="./ESTILOS/HEADER.css">
+
+    <!-- Estilos personalizados para el pie de página -->
     <link rel="stylesheet" type="text/css" href="./ESTILOS/BARRA_FOOTER.css">
 	<link rel="stylesheet" type="text/css" href="./ESTILOS/P1_ESTILOS.css"><!--AGREGAMOS HOJA DE ESTILO DEL PROGRAMA 1-->
 </head>
@@ -28,7 +33,7 @@ $formulario->llenarFormulario(); // SE MUESTRA EL FORMULARIO
 
 </body> </html>
 
-<?php include ("./BASE/footer.html"); ?> <!--SE INCLUYE EL PIE DE PAGINA-->
+<?php include ("BASE/HTML/comunes/footer.html"); ?> <!--SE INCLUYE EL PIE DE PAGINA-->
 
 
 <!--CODIGO PARA ACTIVAR EL ACORDEON-->
