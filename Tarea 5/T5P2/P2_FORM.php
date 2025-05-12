@@ -12,10 +12,10 @@
                    name="valores[]" 
                    class="form-control mb-2" 
                    value="<?= htmlspecialchars($valores[$i]) ?>" <!-- Rellenado automático con el valor anterior (previene XSS) -->
-                   placeholder="Ingrese valor" 
+                   <placeholder="Ingrese valor" 
                    required 
                    pattern="\d+(\.\d+)?" <!-- Solo acepta números positivos (enteros o decimales) -->
-                   title="Solo se permiten números positivos">
+                  <title="Solo se permiten números positivos">
         </div>
     </div>
 <?php endfor; ?> <!-- Fin del bucle que genera los campos de entrada -->
