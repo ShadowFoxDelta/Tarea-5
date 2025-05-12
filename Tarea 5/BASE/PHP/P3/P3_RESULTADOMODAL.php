@@ -7,8 +7,7 @@
       <!-- Inicio de la cabecera del modal -->
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Factura de Comida</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
+        <button type="button" class="btn-close" data-bs-dismiss="modal">
         </button>
       </div> <!-- Fin de la cabecera del modal -->
 
@@ -19,7 +18,6 @@
 
       <!-- Inicio del pie del modal (opcional para botones de acción) -->
       <div class="modal-footer">
-        <!-- Opcionalmente, puedes añadir botones de acción en el footer -->
       </div> <!-- Fin del pie del modal -->
 
     </div> <!-- Fin del contenido del modal -->

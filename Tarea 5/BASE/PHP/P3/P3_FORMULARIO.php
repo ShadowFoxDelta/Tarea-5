@@ -39,7 +39,7 @@ $opciones = [
 
     <!-- Entrada para la edad del cliente -->
     <label for="edadcliente"><h3>Ingresar Edad: </h3></label><br>
-    <input type="number" id="edadcliente" name="edadcliente" min="0" required value="<?= htmlspecialchars($edadcliente) ?>"><br><br>
+    <input type="number" id="edadcliente" name="edadcliente" min="0" max="150" required value="<?= htmlspecialchars($edadcliente) ?>"><br><br>
 
     <br>
 
