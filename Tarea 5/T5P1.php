@@ -20,7 +20,7 @@
             e.preventDefault();
             $.ajax({
                 type: 'POST',
-                url: 'guardarDatos.php',
+                url: 'T5P1/guardarDatos.php',
                 data: $(this).serialize(),
                 success: function(response) {
                     $('#tablaResultados').html(response);
