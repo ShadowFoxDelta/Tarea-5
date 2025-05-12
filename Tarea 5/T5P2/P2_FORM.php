@@ -1,5 +1,6 @@
 <h2>Ingrese 5 valores numéricos:</h2>
-
+<!-- Estilos personalizados específicos del formulario del punto 3 -->
+    <link rel="stylesheet" type="text/css" href="./ESTILOS/P2_ESTILO.css">
 <form method="post"> <!-- Inicia el formulario, enviará los datos con el método POST -->
 <?php for ($i = 0; $i < 5; $i++): ?> <!-- Bucle para generar 5 campos de entrada -->
     <div class="form-group row"> <!-- Grupo de formulario con diseño en filas (usando Bootstrap) -->
