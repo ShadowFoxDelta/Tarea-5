@@ -55,6 +55,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Calculamos el descuento aplicable según la edad
     $descuento = $procesar->calcularDescuento();
 
+    // Si menestra es 0 cantidad3 es 0
+    if ($procesar->MenestraExiste()) {
+        $cantidad3 = 0;
+    }
+
+
     // Enviamos todos los datos de vuelta en formato JSON para mostrarlos en el modal
     echo json_encode([
         'error' => false, // No hubo errores

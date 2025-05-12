@@ -48,16 +48,25 @@ class ProcesarDatos {
             return;
         }
 
+        if ($this->edad == 0) {
+            $this->error = "Debe ingresar una edad mayor que 0.";
+            return;
+        }
+
 
         // Menestra: solo se acepta 0 si es "Ninguno"
 
         if ($this->radio3 !== 0.00 && $this->cantidad3 <= 0) {
             $this->cantidad3 = 0;
             $this->error = "Debe ingresar una cantidad mayor a 0 para la menestra seleccionada.";
-        return;
+            return;
         }
     }
 
+    //Función verificar si colocó menestra
+    public function MenestraExiste(){
+        return $this->radio3 === 0.00;
+    }
 
     //Función verificar si hay error
     public function HayError(){
